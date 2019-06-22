@@ -2,13 +2,13 @@ package com.player;
 
 public class Wizard extends human{
 	Wizard(){
-		health = 50;
-		intelligence = 8;
+		setHealth(50);
+		setIntelligence(8);
 	}
 	public void heal( human friend) {
-		friend.health += intelligence;
+		friend.setHealth(friend.retHealth()+ retIntelligence());
 	}
 	public void fireball(human enemy) {
-		enemy.health -= (intelligence*3);
+		enemy.setHealth(enemy.retHealth()-(retIntelligence()*3));
 	}
 }
